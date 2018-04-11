@@ -37,6 +37,10 @@
     row.size = self.size;
     row.isCutLine = self.isCutLine;
     row.rowHeight = self.rowHeight;
+    row.leadMargin = self.leadMargin;
+    row.topMargin = self.topMargin;
+    row.trailMargin = self.trailMargin;
+    row.bottomMargin = self.bottomMargin;
     
     row.useSize = self.useSize;
     row.attStr = [self.attStr mutableCopy];

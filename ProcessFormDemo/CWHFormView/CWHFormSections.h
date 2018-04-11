@@ -15,6 +15,7 @@
 @property (nonatomic ,strong)NSString *backColor;
 @property (nonatomic ,strong)NSString *title;
 @property (nonatomic ,strong)NSArray *fields;
+@property (nonatomic ,assign)CGFloat height;
 
 @property (nonatomic ,strong)NSArray *rows;
 

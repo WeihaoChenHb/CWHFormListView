@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29426E5C207E025C00943688 /* CWHFormCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29426E5B207E025C00943688 /* CWHFormCollectionReusableView.m */; };
 		2954775A2071D4C30076A37C /* FormSingleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 295477592071D4C30076A37C /* FormSingleTableViewCell.m */; };
 		2954775D2071D4DC0076A37C /* FormDoubleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954775C2071D4DC0076A37C /* FormDoubleTableViewCell.m */; };
 		29780B032042B7A500A46348 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29780B022042B7A500A46348 /* AppDelegate.m */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29426E5A207E025C00943688 /* CWHFormCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHFormCollectionReusableView.h; sourceTree = "<group>"; };
+		29426E5B207E025C00943688 /* CWHFormCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHFormCollectionReusableView.m; sourceTree = "<group>"; };
 		295477582071D4C30076A37C /* FormSingleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormSingleTableViewCell.h; sourceTree = "<group>"; };
 		295477592071D4C30076A37C /* FormSingleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormSingleTableViewCell.m; sourceTree = "<group>"; };
 		2954775B2071D4DC0076A37C /* FormDoubleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormDoubleTableViewCell.h; sourceTree = "<group>"; };
@@ -305,6 +308,8 @@
 				29E8D3CB2079C7C80089A5E9 /* CWHFormCollectionViewCell.m */,
 				29E8D3DC207A1B4E0089A5E9 /* CWHFormCutCollectionViewCell.h */,
 				29E8D3DD207A1B4E0089A5E9 /* CWHFormCutCollectionViewCell.m */,
+				29426E5A207E025C00943688 /* CWHFormCollectionReusableView.h */,
+				29426E5B207E025C00943688 /* CWHFormCollectionReusableView.m */,
 				29E8D3CD2079E3710089A5E9 /* CWHFormDataSource.h */,
 				29E8D3CE2079E3710089A5E9 /* CWHFormDataSource.m */,
 				29E8D3D92079EA1D0089A5E9 /* CWHFormModel.h */,
@@ -555,6 +560,7 @@
 				29EFB2492051370600F0BD65 /* FormRows.m in Sources */,
 				297A5AEF2047A41500FC322E /* ProcAttachmentsModel.m in Sources */,
 				29E8D3DB2079EA1D0089A5E9 /* CWHFormModel.m in Sources */,
+				29426E5C207E025C00943688 /* CWHFormCollectionReusableView.m in Sources */,
 				29E8D3CF2079E3710089A5E9 /* CWHFormDataSource.m in Sources */,
 				29EFB258205174FF00F0BD65 /* FormDataSource.m in Sources */,
 				29E8D3B0207315500089A5E9 /* ProcOfficeModel.m in Sources */,

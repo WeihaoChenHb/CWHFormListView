@@ -92,7 +92,7 @@
                 muAttStr.yy_firstLineHeadIndent = -w;
                 muAttStr.yy_headIndent = w;
               
-                obj.useSize = CGSizeMake(width, layout.textBoundingSize.height);
+                obj.useSize = CGSizeMake(width, layout.textBoundingSize.height + obj.topMargin + obj.bottomMargin);
                 CWHFormRows *newRow = [CWHFormRows new];
                 newRow = [obj mutableCopy];
                 [rows addObject:newRow];
@@ -101,6 +101,7 @@
                     CWHFormRows *cutRows = [[CWHFormRows alloc] init];
                     cutRows.isCutLine = YES;
                     cutRows.size = @{@"width" : @(100)};
+                    cutRows.useSize = CGSizeMake(self.frame.size.width, 2);
                     [rows addObject:cutRows];
                 }
             }];
@@ -127,13 +128,13 @@
             obj.attStr = muAttStr;
             YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(207, CGFLOAT_MAX) text:muAttStr];
             
-//            obj.useSize = layout.textBoundingSize;
-            obj.useSize = CGSizeMake(width, layout.textBoundingSize.height);
+            obj.useSize = CGSizeMake(width, layout.textBoundingSize.height + obj.topMargin + obj.bottomMargin);
         }];
         CWHFormRows *cutRows = [[CWHFormRows alloc] init];
         cutRows.isCutLine = YES;
         cutRows.size = @{@"width" : @(100)};
-        
+//        cutRows.rowHeight = 10;
+        cutRows.useSize = CGSizeMake(self.frame.size.width, 2);
         [rows addObject:cutRows];
         
         return [rows copy];

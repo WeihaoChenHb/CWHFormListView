@@ -23,6 +23,11 @@
 @property (nonatomic ,assign)CGFloat rowHeight;
 @property (nonatomic ,strong)NSDictionary *size;
 
+@property (nonatomic ,assign)CGFloat leadMargin;
+@property (nonatomic ,assign)CGFloat topMargin;
+@property (nonatomic ,assign)CGFloat trailMargin;
+@property (nonatomic ,assign)CGFloat bottomMargin;
+
 @property (nonatomic ,assign)CGSize useSize;
 @property (nonatomic ,assign)BOOL isCutLine;
 

@@ -10,8 +10,11 @@
 #import "CWHFormCollectionViewCell.h"
 #import "CWHFormDataSource.h"
 #import "NSDictionary+SafeValue.h"
+#import "CWHFormCollectionReusableView.h"
+#import "UIColor+moreColor.h"
 
 static NSString *const formCellID = @"CWHFormCollectionViewCell";
+static NSString *const reusableViewID = @"CWHFormCollectionReusableView";
 
 @interface CWHFormMainView ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -46,6 +49,7 @@ static NSString *const formCellID = @"CWHFormCollectionViewCell";
         [self setupCollectionView];
         
     }
+
     return self;
 }
 
@@ -55,27 +59,6 @@ static NSString *const formCellID = @"CWHFormCollectionViewCell";
         _rowHeights = [NSMutableArray new];
     }
     return _rowHeights;
-}
-
-- (void)addHeightWith:(CGFloat)height indexPath:(NSIndexPath *)indexPath {
-    
-    NSMutableArray *heights = self.rowHeights[indexPath.section];
-    CWHFormSections *section = self.dataSource.model.sections[indexPath.section];
-//    if (heights.count == section.rows.count) {
-//        return;
-//    }
-    
-    if (heights.count  > indexPath.row) {
-        [heights replaceObjectAtIndex:indexPath.row withObject:@(height)];
-    } else {
-        
-        [heights addObject:@(height)];
-    }
-    
-    if (heights.count == section.rows.count) {
-        [self.collectionView reloadData];
-    }
-    
 }
 
 - (void)setupCollectionView {
@@ -93,6 +76,7 @@ static NSString *const formCellID = @"CWHFormCollectionViewCell";
     
     [_collectionView registerClass:[CWHFormCollectionViewCell class] forCellWithReuseIdentifier:formCellID];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellID"];
+    [_collectionView registerClass:[CWHFormCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:reusableViewID];
     
 }
 
@@ -111,18 +95,10 @@ static NSString *const formCellID = @"CWHFormCollectionViewCell";
     
     CWHFormSections *section = self.dataSource.model.sections[indexPath.section];
     CWHFormRows *row = section.rows[indexPath.row];
-    CGSize size = [self collectionView:collectionView layout:_flowLayout sizeForItemAtIndexPath:indexPath];
+  
     if (row.isCutLine) {
         
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
-        
-//        [self addHeightWith:0.5 indexPath:indexPath];
-        row.rowHeight = 0.5;
-        
-        if (size.height != row.rowHeight) {
-            
-            [collectionView reloadItemsAtIndexPaths:@[indexPath]];
-        }
         
         return cell;
         
@@ -131,22 +107,44 @@ static NSString *const formCellID = @"CWHFormCollectionViewCell";
         CWHFormCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:formCellID forIndexPath:indexPath];
         
         cell.row = row;
-        
-        if (size.height != row.rowHeight) {
-            
-            [collectionView reloadItemsAtIndexPaths:@[indexPath]];
-        }
-//        [self addHeightWith:row.rowHeight indexPath:indexPath];
+
         return cell;
+    }
+}
+
+// 组头和组尾
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader])
+    {
+        CWHFormSections *section = self.dataSource.model.sections[indexPath.section];
+        CWHFormCollectionReusableView *head = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:reusableViewID forIndexPath:indexPath];
+        
+        head.title = section.title;
+        head.titleColor = [UIColor colorWithHexColorString:section.textColor];
+        head.backgroundColor = [UIColor colorWithHexColorString:section.backColor];
+        
+        return head;
+     
+    }
+    else
+    {
+        return nil;
     }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CWHFormSections *section = self.dataSource.model.sections[indexPath.section];
     CWHFormRows *row = section.rows[indexPath.row];
-    CGFloat width = [[row.size safe_valueForKey:@"width"] floatValue] / 100 * self.bounds.size.width;
-    
     return row.useSize;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    CWHFormSections *sections = self.dataSource.model.sections[section];
+    
+    return CGSizeMake(self.bounds.size.width, sections.height);
 }
 
 // 设置组和item之间的间隔

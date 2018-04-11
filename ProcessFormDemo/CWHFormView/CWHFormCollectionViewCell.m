@@ -34,23 +34,23 @@
     self.labelView = [[DetailLabelView alloc] init];
     
     [self.contentView addSubview:self.labelView];
-    
-    [self.labelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(5, 5, 5, 5));
-    }];
+
 }
 
 - (void)setRow:(CWHFormRows *)row {
     
     _row = row;
     self.contentView.backgroundColor = [UIColor colorWithHexColorString:row.backColor];
-//    self.labelView.title = row.title;
-//    self.labelView.detail = row.detail;
-//    self.labelView.titleTextColor = [UIColor colorWithHexColorString:row.titleColor];
-//    self.labelView.detailTextColor = [UIColor colorWithHexColorString:row.detailColor];
+    self.labelView.title = row.title;
+    self.labelView.detail = row.detail;
+    self.labelView.titleTextColor = [UIColor colorWithHexColorString:row.titleColor];
+    self.labelView.detailTextColor = [UIColor colorWithHexColorString:row.detailColor];
     self.labelView.text = row.attStr;
-//    _row.rowHeight = self.labelView.height;
+    
+    [self.labelView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(row.topMargin, row.leadMargin, row.bottomMargin, row.trailMargin));
+    }];
 }
 
 @end

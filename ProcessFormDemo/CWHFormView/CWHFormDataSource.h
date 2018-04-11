@@ -13,8 +13,6 @@
 
 @property (nonatomic ,strong)CWHFormModel *model;
 
-@property (nonatomic ,assign)CGFloat width;
-
 - (instancetype)initWithFrame:(CGRect)frame Json:(id)Json resource:(id)resource;
 
 @end

@@ -38,9 +38,9 @@
     
     [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.left.equalTo(self).with.offset(10);
+        make.left.equalTo(self);
         make.centerY.equalTo(self);
-        make.right.equalTo(self).with.offset(-10);
+        make.right.equalTo(self);
     }];
     
 //    self.detailLb = [[UILabel alloc] init];
