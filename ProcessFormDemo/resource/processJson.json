@@ -1,0 +1,179 @@
+{
+    "id" : "79239600f23046c1baaf7902f4f4e0e5",
+    "phone" : "13631515832",
+    "leader" : {
+        "id" : "294752980d414775bd2f5d692bcf1869",
+        "loginName" : "707198",
+        "position" : "IOS开发工程师",
+        "mobile" : "15013141514",
+        "versionFlag" : "1",
+        "company" : {
+            "fullName" : "nullnull",
+            "id" : "1",
+            "parentId" : "0",
+            "isNewRecord" : false,
+            "sort" : 30,
+            "type" : "2"
+        },
+        "orderBy" : "",
+        "office" : {
+            "name" : "共享资源研发部",
+            "parentIds" : "0,29f3b38eb645423aaf8cb808a873b77b,bffdd60a61ef42ab8b9c2491ca6ede7c,b27ea8037db348afae5c9692cd2291d9,",
+            "sort" : 30,
+            "id" : "8bf552dc0c984ffe841e596736958317",
+            "primaryPerson" : {
+                "orderBy" : "",
+                "loginFlag" : "1",
+                "admin" : false,
+                "id" : "78675824350348d69a380f284cd0684e",
+                "versionFlag" : "1",
+                "roleNames" : "",
+                "name" : "周建民",
+                "isNewRecord" : false
+            },
+            "parentId" : "b27ea8037db348afae5c9692cd2291d9",
+            "fullName" : "腾邦国际\/总部职能\/IT部\/共享资源研发部",
+            "type" : "2",
+            "parentNames" : "腾邦国际\/总部职能\/IT部\/",
+            "isNewRecord" : false
+        },
+        "isNewRecord" : false,
+        "roleNames" : "",
+        "admin" : false,
+        "no" : "707198",
+        "loginFlag" : "1",
+        "name" : "陈伟豪"
+    },
+    "procInsId" : "694887",
+    "createDate" : "2017-06-14 20:06:20",
+    "leaveData" : [
+                   {
+                   "updateDate" : "2017-12-14 11:39:38",
+                   "remarks" : "asdf",
+                   "id" : "8215c9079962454d9b18de9934c214b9",
+                   "endTime" : "2017-06-14 18:00:00",
+                   "days" : "1",
+                   "leaveId" : "79239600f23046c1baaf7902f4f4e0e5",
+                   "createDate" : "2017-06-14 20:06:20",
+                   "startTime" : "2017-06-14 08:30:00",
+                   "isNewRecord" : false
+                   }
+                   ],
+    "title" : "李扬的公事外出申请3",
+    "isNewRecord" : false,
+    "updateDate" : "2017-12-14 11:39:38",
+    "attachments" : [
+                     {
+                     "bussinessId" : "79239600f23046c1baaf7902f4f4e0e5",
+                     "updateDate" : "2017-12-14 11:39:38",
+                     "remarks" : "attachments",
+                     "id" : "ad29d5514a4e41919b19b0ec0d6185a9",
+                     "src" : "\/userfiles\/707212\/9a6fac7b5ffc451ea08f9a98010ee8ea.jpg",
+                     "sort" : 0,
+                     "size" : "52477",
+                     "createDate" : "2017-12-14 11:39:38",
+                     "name" : "业务招待流程.jpg",
+                     "isNewRecord" : false
+                     }
+                     ],
+    "act" : {
+        "procDefName" : "公事外出申请3",
+        "p3" : "",
+        "status" : "",
+        "p4" : "",
+        "todoTask" : false,
+        "p5" : "",
+        "processStatus" : "0",
+        "procInsId" : "694887",
+        "auditStatus" : "delegate",
+        "p6" : "",
+        "processType" : "1",
+        "flag" : "yes",
+        "p7" : "",
+        "backFlag" : "",
+        "isNewRecord" : true,
+        "p8" : "",
+        "procDefKey" : "HR_04",
+        "list" : [
+                  {
+                  "assigneeName" : "陈伟豪",
+                  "finishTask" : true,
+                  "endDate" : "2017-08-18 17:17:57",
+                  "taskDefKey" : "HR_04_01",
+                  "taskName" : "01_直属上级审批",
+                  "flag" : "yes",
+                  "assignee" : "707198",
+                  "beginDate" : "2017-06-14 20:06:20",
+                  "comment" : "<font color='#ec9231'>[����]<\/font>Lll",
+                  "todoTask" : false,
+                  "isNewRecord" : true
+                  },
+                  {
+                  "assigneeName" : "李扬",
+                  "finishTask" : true,
+                  "endDate" : "2017-12-14 11:39:38",
+                  "taskDefKey" : "HR_04_04",
+                  "taskName" : "04_驳回调整申请",
+                  "flag" : "yes",
+                  "assignee" : "707212",
+                  "beginDate" : "2017-08-18 17:17:57",
+                  "comment" : "[调整申请] ",
+                  "todoTask" : false,
+                  "isNewRecord" : true
+                  }
+                  ],
+        "restTimes" : "93h",
+        "p9" : "",
+        "p1" : "",
+        "procDefId" : "HR_04:1:620187",
+        "taskDefKey" : "HR_04_01",
+        "taskName" : "01_%E7%9B%B4%E5%B1%9E%E4%B8%8A%E7%BA%A7%E5%AE%A1%E6%89%B9",
+        "p2" : "",
+        "finishTask" : false,
+        "taskId" : "757031"
+    },
+    "user" : {
+        "id" : "05c54a384ce64177b20984c9cebc0781",
+        "loginName" : "707212",
+        "position" : "产品经理",
+        "phone" : "0755-83485999",
+        "versionFlag" : "1",
+        "mobile" : "15013141514",
+        "company" : {
+            "fullName" : "nullnull",
+            "id" : "1",
+            "parentId" : "0",
+            "isNewRecord" : false,
+            "sort" : 30,
+            "type" : "2"
+        },
+        "orderBy" : "",
+        "office" : {
+            "name" : "共享资源研发部",
+            "parentIds" : "0,29f3b38eb645423aaf8cb808a873b77b,bffdd60a61ef42ab8b9c2491ca6ede7c,b27ea8037db348afae5c9692cd2291d9,",
+            "sort" : 30,
+            "id" : "8bf552dc0c984ffe841e596736958317",
+            "primaryPerson" : {
+                "orderBy" : "",
+                "loginFlag" : "1",
+                "admin" : false,
+                "id" : "78675824350348d69a380f284cd0684e",
+                "versionFlag" : "1",
+                "roleNames" : "",
+                "name" : "周建民",
+                "isNewRecord" : false
+            },
+            "parentId" : "b27ea8037db348afae5c9692cd2291d9",
+            "fullName" : "腾邦国际\/总部职能\/IT部\/共享资源研发部",
+            "type" : "2",
+            "parentNames" : "腾邦国际\/总部职能\/IT部\/",
+            "isNewRecord" : false
+        },
+        "isNewRecord" : false,
+        "roleNames" : "",
+        "admin" : false,
+        "no" : "707212",
+        "loginFlag" : "1",
+        "name" : "李扬"
+    }
+}

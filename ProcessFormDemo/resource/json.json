@@ -1,0 +1,246 @@
+
+{
+    "sections":[
+                {
+                "title":"申请详情",
+                "textColor":"5A7E4F",
+                "backColor":"d8f3d8",
+                "fields":[
+                          {
+                          "backColor":"eef9ee",
+                          "rows":[
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"procInsId",
+                                             "title":"流程号："
+                                             },
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"createDate",
+                                             "title":"时间："
+                                             }
+                                             ]
+                                  
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"user.name",
+                                             "title":"申请人："
+                                             },
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"user.no",
+                                             "title":"工号："
+                                             }
+                                             
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"leader.name",
+                                             "title":"直属上级："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"user.office.fullName",
+                                             "title":"部门："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"user.position",
+                                             "title":"职位："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"user.mobile",
+                                             "title":"电话："
+                                             }
+                                             ]
+                                  }
+                                  
+                                  
+                                  ]
+                          
+                          },
+                          {
+                          "repetition":true,
+                          "keyPath":"leaveData",
+                          "rows":[
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"startTime",
+                                             "title":"开始时间："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"endTime",
+                                             "title":"结束时间："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"days",
+                                             "title":"公出时间：："
+                                             }
+                                             ]
+                                  },
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"remarks",
+                                             "title":"公事外出："
+                                             }
+                                             ]
+                                  }
+                                  ]
+                          
+                          },
+                          {
+                          "repetition":true,
+                          "keyPath":"attachments",
+                          "rows":[
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"1aac19",
+                                             "keyPath":"name",
+                                             "linkPath":"src",
+                                             "title":"附件："
+                                             }
+                                             ]
+                                  }
+                                  
+                                  ]
+                          },
+                          {
+                          "isNecessary":false,
+                          "keyPath":"act.processStatus",
+                          "rows":[
+                                  {
+                                  "backColor":"eef9ee",
+                                  "modules":[
+                                             {
+                                             "keyPath":"act.restTimes",
+                                             "title":"剩余审批时间："
+                                             }
+                                             ]
+                                  }
+                                  ]
+                          }
+                          ]
+                
+                
+                },
+                {
+                "title":"审批明细",
+                "textColor":"7C5491",
+                "backColor":"eddcf6",
+                "fields":[
+                          {
+                          "repetition":true,
+                          "keyPath":"act.list",
+                          "backColor":"f6ecfb",
+                          "rows":[
+                                  {
+                                  "backColor":"f6ecfb",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"assigneeName",
+                                             "title":"审批人："
+                                             }
+                                             ]
+                                  
+                                  },
+                                  {
+                                  "backColor":"f6ecfb",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"comment",
+                                             "title":"意见："
+                                             }
+                                             ]
+                                  
+                                  },
+                                  {
+                                  "backColor":"f6ecfb",
+                                  "modules":[
+                                             {
+                                             "titleColor":"000000",
+                                             "detailColor":"000000",
+                                             "keyPath":"endDate",
+                                             "title":"审批时间："
+                                             }
+                                             ]
+                                  
+                                  }
+                                  ]
+                          }
+                          ]
+                
+                }
+                
+                ]
+}
+
+
+
+
+
+
+
