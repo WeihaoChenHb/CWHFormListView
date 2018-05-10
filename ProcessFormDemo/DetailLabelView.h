@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YYText.h"
 
 @interface DetailLabelView : UIView
 
@@ -19,14 +19,17 @@
 
 @property (nonatomic ,strong) UIColor *detailTextColor;
 
-@property (nonatomic ,strong) NSString *title;
+//@property (nonatomic ,strong) NSString *title;
 
-@property (nonatomic ,strong) NSString *detail;
+@property (nonatomic ,strong) NSAttributedString *title;
+
+@property (nonatomic ,strong) NSAttributedString *detail;
 
 @property (nonatomic ,assign) CGFloat height;
 
 
 @property (nonatomic ,strong) NSAttributedString *text;
+
 
 
 @end

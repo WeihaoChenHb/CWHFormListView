@@ -44,4 +44,10 @@
     _label.text = title;
 }
 
+- (void)setTitleColor:(UIColor *)titleColor {
+    
+    _titleColor = titleColor;
+    _label.textColor = titleColor;
+}
+
 @end

@@ -41,11 +41,11 @@
     
     _row = row;
     self.contentView.backgroundColor = [UIColor colorWithHexColorString:row.backColor];
-    self.labelView.title = row.title;
-    self.labelView.detail = row.detail;
+    self.labelView.title = row.attriTitle;
+    self.labelView.detail = row.attriDetail;
     self.labelView.titleTextColor = [UIColor colorWithHexColorString:row.titleColor];
     self.labelView.detailTextColor = [UIColor colorWithHexColorString:row.detailColor];
-    self.labelView.text = row.attStr;
+//    self.labelView.text = row.attStr;
     
     [self.labelView mas_makeConstraints:^(MASConstraintMaker *make) {
         

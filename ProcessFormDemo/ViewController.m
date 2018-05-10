@@ -43,7 +43,7 @@
     NSData *date1 = [[NSData alloc] initWithContentsOfFile:path1];
     NSString *jsonStr1 = [[NSString alloc] initWithData:date1 encoding:NSUTF8StringEncoding];
 
-    _formTableView = [[FromTableView alloc] initWithFrame:self.view.bounds Json:jsonStr1 dic:dic];
+    _formTableView = [[FromTableView alloc] initWithFrame:CGRectMake(20, 0, self.view.bounds.size.width, self.view.bounds.size.height) Json:jsonStr1 dic:dic];
     
     [self.view addSubview:_formTableView];
     

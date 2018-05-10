@@ -8,12 +8,13 @@
 
 #import "DetailLabelView.h"
 #import "Masonry.h"
+#import "YYText.h"
 
 @interface DetailLabelView ()
 
-@property (nonatomic ,strong) UILabel *titleLb;
+@property (nonatomic ,strong) YYLabel *titleLb;
 
-@property (nonatomic ,strong) UILabel *detailLb;
+@property (nonatomic ,strong) YYLabel *detailLb;
 
 @end
 
@@ -32,27 +33,31 @@
 #pragma mark - setupUI
 - (void)createUI {
     
-    self.titleLb = [[UILabel alloc] init];
+    self.titleLb = [[YYLabel alloc] init];
     self.titleLb.numberOfLines = 0;
+//    [self.titleLb sizeToFit];
     [self addSubview:self.titleLb];
+    
+    self.detailLb = [[YYLabel alloc] init];
+    self.detailLb.numberOfLines = 0;
+        [self.detailLb sizeToFit];
+    [self addSubview:self.detailLb];
+    
+    
+    [self.detailLb mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        //        make.left.equalTo(self.titleLb.mas_right);
+        make.centerY.equalTo(self.titleLb);
+        make.right.equalTo(self).with.offset(-1);
+    }];
     
     [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
        
         make.left.equalTo(self);
         make.centerY.equalTo(self);
-        make.right.equalTo(self);
+        make.right.equalTo(self.detailLb.mas_left);
     }];
     
-//    self.detailLb = [[UILabel alloc] init];
-//    self.detailLb.numberOfLines = 0;
-//    [self addSubview:self.detailLb];
-//
-//    [self.detailLb mas_makeConstraints:^(MASConstraintMaker *make) {
-//
-//        make.left.equalTo(self.titleLb.mas_right);
-//        make.centerY.equalTo(self.titleLb);
-//        make.right.equalTo(self).with.offset(-10);
-//    }];
 }
 
 #pragma mark - setter and getter
@@ -82,16 +87,16 @@
     self.detailLb.textColor = detailTextColor;
 }
 
-- (void)setTitle:(NSString *)title {
+- (void)setTitle:(NSAttributedString *)title {
     
     _title = title;
-    self.titleLb.text = title;
+    self.titleLb.attributedText = title;
 }
 
-- (void)setDetail:(NSString *)detail {
+- (void)setDetail:(NSAttributedString *)detail {
     
     _detail = detail;
-    self.detailLb.text = detail;
+    self.detailLb.attributedText = detail;
     
     self.height = [self.detailLb sizeThatFits:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)].height;
 }
@@ -101,6 +106,7 @@
     _text = text;
     self.titleLb.attributedText = text;
 }
+
 
 
 /*

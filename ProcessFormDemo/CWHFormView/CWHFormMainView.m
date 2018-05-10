@@ -71,6 +71,7 @@ static NSString *const reusableViewID = @"CWHFormCollectionReusableView";
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.showsVerticalScrollIndicator = NO;
     
     [self addSubview:_collectionView];
     
@@ -137,6 +138,7 @@ static NSString *const reusableViewID = @"CWHFormCollectionReusableView";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CWHFormSections *section = self.dataSource.model.sections[indexPath.section];
     CWHFormRows *row = section.rows[indexPath.row];
+    NSLog(@"%f--%f",row.useSize.width,row.useSize.height);
     return row.useSize;
 }
 

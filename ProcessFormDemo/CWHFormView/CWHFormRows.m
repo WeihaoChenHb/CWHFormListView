@@ -34,6 +34,8 @@
     row.keyPath = [self.keyPath mutableCopy];
     row.linkPath = [self.linkPath mutableCopy];
     row.detail = [self.detail mutableCopy];
+    row.attriDetail = [self.attriDetail mutableCopy];
+    row.attriTitle = [self.attriTitle mutableCopy];
     row.size = self.size;
     row.isCutLine = self.isCutLine;
     row.rowHeight = self.rowHeight;
@@ -41,6 +43,8 @@
     row.topMargin = self.topMargin;
     row.trailMargin = self.trailMargin;
     row.bottomMargin = self.bottomMargin;
+    row.titleWidth = self.titleWidth;
+    row.font = self.font;
     
     row.useSize = self.useSize;
     row.attStr = [self.attStr mutableCopy];

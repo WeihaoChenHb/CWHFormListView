@@ -7,12 +7,14 @@
               "height":30,
               "fields":[
                 {
+                  "rowType":0,
                   "rows":[
                     {
                       "backColor":"eef9ee",
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"procInsId",
+                      "font":15,
                       "title":"流程号：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -27,6 +29,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"createDate",
+                      "font":15,
                       "title":"时间：", 
                       "leadMargin":10,
                       "topMargin":10,
@@ -41,6 +44,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"user.name",
+                      "font":15,
                       "title":"申请人：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -54,6 +58,7 @@
                       "backColor":"eef9ee",
                       "titleColor":"000000",
                       "detailColor":"000000",
+                      "font":15,
                       "keyPath":"user.no",
                       "title":"工号：",
                       "leadMargin":10,
@@ -69,6 +74,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"leader.name",
+                      "font":15,
                       "title":"直属上级：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -83,6 +89,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"user.office.fullName",
+                      "font":15,
                       "title":"部门：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -97,6 +104,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"user.position",
+                      "font":15,
                       "title":"职位：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -111,6 +119,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"user.mobile",
+                      "font":15,
                       "title":"电话：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -124,6 +133,7 @@
                   ] 
                 },
                 {
+                  "rowType":1,
                   "repetition":true,
                   "keyPath":"leaveData",
                   "rows":[
@@ -188,6 +198,7 @@
 
                 },
                 {
+                  "rowType":3,
                   "repetition":true,
                   "keyPath":"attachments",
                   "rows":[
@@ -210,6 +221,7 @@
                   ]
                 },
                 {
+                  "rowType":2,
                   "isNecessary":false,
                   "keyPath":"act.processStatus",
                   "rows":[
@@ -237,6 +249,7 @@
               "height":30,
               "fields":[
                 {
+                  "rowType":1,
                   "repetition":true,
                   "keyPath":"act.list",
                   "backColor":"f6ecfb",
@@ -246,6 +259,7 @@
                       "titleColor":"000000",
                       "detailColor":"000000",
                       "keyPath":"assigneeName",
+                      "font":15,
                       "title":"审批人：",
                       "leadMargin":10,
                       "topMargin":10,
@@ -261,6 +275,7 @@
                       "detailColor":"000000",
                       "keyPath":"comment",
                       "title":"意见：",
+                      "font":15,
                       "leadMargin":10,
                       "topMargin":10,
                       "trailMargin":10,
@@ -275,6 +290,7 @@
                       "detailColor":"000000",
                       "keyPath":"endDate",
                       "title":"审批时间：",
+                      "font":15,
                       "leadMargin":10,
                       "topMargin":10,
                       "trailMargin":10,

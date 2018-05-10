@@ -9,6 +9,13 @@
 #import "BaseEntity.h"
 #import "CWHFormRows.h"
 
+typedef NS_ENUM(NSUInteger, CWHFormRowType) {
+    CWHFormRowDefaultType,          // 普通类型
+    CWHFormRowRepetitionType,       // 重复类型
+    CWHFormRowNecessaryType,        // 按照数据，可能会没有
+    CWHFormRowMoreOneType           // 多条数据放到一个row里面
+};
+
 @interface CWHFormFields : BaseEntity
 
 /** 是否是重复的  YES 是重复的  NO 不是  默认不是 */
@@ -19,5 +26,7 @@
 @property (nonatomic ,strong)NSString *necessaryPath;
 @property (nonatomic ,strong)NSString *keyPath;
 @property (nonatomic ,strong)NSArray *rows;
+
+@property (nonatomic ,assign)CWHFormRowType rowType;
 
 @end
